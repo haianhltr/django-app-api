@@ -24,3 +24,6 @@ docker-compose run --rm app sh -c "python manage.py wait_for_db && python manage
 
 #---------------Remove Volume
 docker volume rm <name>
+
+#----------------Create super
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
