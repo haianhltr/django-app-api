@@ -10,6 +10,14 @@ from core.models import (
 
 from core.models import Recipe
 
+class TagSerializer(serializers.ModelSerializer):
+    """Serializer for tags."""
+
+    class Meta:
+        model = Tag
+        fields = ['id', 'name']
+        read_only_fields = ['id']
+
 
 class RecipeSerializer(serializers.ModelSerializer):
     """Serializer for recipes."""
